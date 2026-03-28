@@ -1,13 +1,20 @@
 
+function createBankAccount() {
+  let balance = 0;
 
-const add = function (a, b){
- var a = 5
- 
+  return {
+    deposit(amount) {
+      balance += amount;
+      console.log(balance);
+    },
+    getBalance() {
+      return balance;
+    }
+  };
 }
 
-add()
+const account = createBankAccount();
 
-
-console.log(a)
-
+account.deposit(100); // 100
+console.log(account.getBalance()); // 100
 

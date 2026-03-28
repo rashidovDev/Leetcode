@@ -153,8 +153,8 @@ console.log(sumAll(1, 2, 3, 4));
 // 10
 
 // Rest in destructuring
-const [first, ...rest] = [10, 20, 30, 40];
-console.log(first, rest);
+const [first1, ...rest] = [10, 20, 30, 40];
+console.log(first1, rest);
 // Output: 10 [ 20, 30, 40 ]
 
 // ===== EXERCISES =====
