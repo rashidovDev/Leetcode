@@ -33,6 +33,7 @@ function countCharacters(str){
     return obj
 }
 
+// ISANAGRAM
 function isAnagrams(str1,str2){
 let cleanedStr1 = str1.replace(/\s/g, '').toLowerCase()
 let cleanedStr2 = str2.replace(/\s/g, '').toLowerCase()
@@ -51,7 +52,6 @@ for(let char of cleanedStr2){
 return true
 }
 
-console.log(isAnagrams("Anvar", "Anvara"))
 
 
 
