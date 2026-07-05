@@ -1,7 +1,6 @@
 
 function createBankAccount() {
-  let balance = 0;
-
+  let balance = 20;
   return {
     deposit(amount) {
       balance += amount;

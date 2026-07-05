@@ -9,11 +9,18 @@ function isPalindrome(str) {
     left++
     right--
   }
-
   return true
 }
 
-const nums = [1, 2, 3, 4]
+const nums = [1, 2, 3, 4, 2]
+
+function removeDuplicates(arr){
+    return [...new Set(arr)]
+}
+
+console.log(removeDuplicates(nums))
+
+
 
 function reverseArr(arr){
     let left = 0
@@ -162,5 +169,6 @@ function sortArray2(){
     return arr
 }
 
-console.log("SORT:",sortArray2(newArr))
+
+
 

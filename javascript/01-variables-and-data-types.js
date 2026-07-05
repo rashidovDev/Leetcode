@@ -14,7 +14,6 @@ age = 26; // OK - let can be reassigned
 // const: Block-scoped, cannot be reassigned (but properties can be modified)
 const name = "Rashid";
 // name = "Ali"; // ERROR: Cannot assign to const variable
-
 // var: Function-scoped, can be reassigned (avoid in modern JS)
 var decade = "2020s";
 decade = "2030s"; // OK
@@ -90,3 +89,4 @@ console.log(result3); // Output: 10
 // 4) What is Boolean("")? What is Boolean(" ")? Why different?
 
 // Your code below:
+console.log(result3)

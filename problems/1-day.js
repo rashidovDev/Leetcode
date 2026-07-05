@@ -14,8 +14,10 @@ let user = {name : 'Anvar', age : 34}
 
 // REVERSE STRING WITH METHOD
 function reverse(str){
-    return str.split('').reverse().join('-')
+    return str.split('').reverse().join('')
 }
+
+console.log(reverse('Anvar'))
 
 // REVERSE STRING WITHOUT METHOD
 function reverseWithoutReverseMethod(str){
@@ -83,8 +85,68 @@ function removeDuplicates(arr){
 
   return result
 }
-console.log(removeDuplicates(nums))
+// console.log(removeDuplicates(nums))
 
+function frequencyCounter(str){
+   let result = {};
+   let cleanedStr = str.toLowerCase()
+   for(let char of cleanedStr){
+   result[char] = (result[char] || 0) + 1
+   }
+   return result
+}
+//  console.log(frequencyCounter("Anvar"))
 
+// let obj = {nam:"Anvar", a:"12"}
+// console.log(obj.nam)
 
+function anagram(str1, str2){
+if(str1.length !== str2.length) return false
+let clstr1 = str1.replace(/\s/g, '').toLowerCase()
+let clstr2 = str2.replace(/\s/g, '').toLowerCase()
+const obj = {}
 
+for(let char of clstr1){
+    obj[char] = (obj[char] || 0) + 1
+} 
+
+for(let char of clstr2){
+    if(!obj[char]) return false
+    obj[char]--
+}
+
+return true
+}
+// console.log(anagram("listen ad", "silent da"))
+let array = [0,1,0,3,12]
+function moveZeros(arr){
+  let index = 0
+
+  for(let i=0; i <arr.length; i++){
+    if(arr[i] !== 0){
+        arr[index] = arr[i]
+        index++
+    }
+  }
+
+  while(index < arr.length){
+    arr[index] = 0
+    index++
+  }
+  return arr
+}
+console.log(moveZeros(array))
+function moveZeros(arr){
+  let left = 0
+
+  for(let right = 0; right < arr.length; right++){
+    if(arr[right] !== 0){
+      let temp = arr[left]
+      arr[left] = arr[right]
+      arr[right] = temp
+      left++
+    }
+  }
+
+  return arr
+}
