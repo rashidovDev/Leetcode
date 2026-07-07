@@ -12,13 +12,12 @@ function isPalindrome(str) {
   return true
 }
 
-const nums = [1, 2, 3, 4, 2]
 
 function removeDuplicates(arr){
     return [...new Set(arr)]
 }
 
-console.log(removeDuplicates(nums))
+
 
 
 
@@ -77,6 +76,7 @@ for(let i=0; i < arr.length; i++){
     }
 }
 
+
 while(index < arr.length){
     arr[index] = 0
     index++
@@ -84,6 +84,7 @@ while(index < arr.length){
 
 return arr
 }
+
 
 function moveZeros2(arr){
 let left = 0
@@ -170,5 +171,23 @@ function sortArray2(){
 }
 
 
+const nums = [1,2,3,4,5,6,7]
+function rotate(nums, k=3) {
+n = nums.length;
 
+//   reverse array
+reverse(nums, 0, n-1)
 
+re
+}
+
+function reverse(nums,left, right){
+    while(left < right){
+        [nums[left], nums[right]] = [nums[right], nums[left]]
+        left++
+        right--
+    }
+    return nums
+}
+
+console.log(reverse(nums, 0, nums.length-1))
