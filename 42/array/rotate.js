@@ -44,4 +44,4 @@ function generatePascal(numRows){
     return result
 }
 
-console.log(generatePascal(3))
+console.log(generatePascal(5))
